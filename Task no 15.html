@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript String Method Project Practice</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI';
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      width: 420px;
+      margin: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin: 4px;
+      padding: 10px;
+      border: none;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f1f1f1;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>✨ JavaScript String Methods Lab</h2>
+
+  <input type="text" id="userInput" placeholder="Type something here...">
+
+  <div>
+    <button onclick="convertUpper()">UpperCase</button>
+    <button onclick="convertLower()">LowerCase</button>
+    <button onclick="removeSpaces()">Trim</button>
+    <button onclick="getSlice()">Slice</button>
+    <button onclick="getSubstring()">Substring</button>
+    <button onclick="changeWord()">Replace</button>
+    <button onclick="checkWord()">Includes</button>
+    <button onclick="findIndex()">IndexOf</button>
+    <button onclick="makeArray()">Split</button>
+    <button onclick="joinText()">Concat</button>
+  </div>
+
+  <div class="result" id="resultBox">Result will show here...</div>
+</div>
+
+<script>
+
+function getValue() {
+  return document.getElementById("userInput").value;
+}
+
+function show(result) {
+  document.getElementById("resultBox").innerText = "Result: " + result;
+}
+
+// 1
+function convertUpper() {
+  let text = getValue();
+  if(text === "") return alert("Please enter text!");
+  show(text.toUpperCase());
+}
+
+// 2
+function convertLower() {
+  let text = getValue();
+  show(text.toLowerCase());
+}
+
+// 3
+function removeSpaces() {
+  let text = getValue();
+  show(text.trim());
+}
+
+// 4
+function getSlice() {
+  let text = getValue();
+  show(text.slice(0, 5));
+}
+
+// 5
+function getSubstring() {
+  let text = getValue();
+  show(text.substring(1, 6));
+}
+
+// 6
+function changeWord() {
+  let text = getValue();
+  show(text.replace("bad", "good"));
+}
+
+// 7
+function checkWord() {
+  let text = getValue();
+  show(text.includes("JS"));
+}
+
+// 8
+function findIndex() {
+  let text = getValue();
+  show(text.indexOf("a"));
+}
+
+// 9
+function makeArray() {
+  let text = getValue();
+  show(text.split(" ").join(" | "));
+}
+
+// 10
+function joinText() {
+  let text = getValue();
+  show(text.concat(" 🚀 Learning JavaScript"));
+}
+
+</script>
+
+</body>
+</html>
