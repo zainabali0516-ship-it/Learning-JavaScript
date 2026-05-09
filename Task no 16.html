@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Number Methods Practice</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f7fb;
+      margin:0;
+      padding:20px;
+    }
+
+    h1{
+      text-align:center;
+      color:#1e3a8a;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .box{
+      background:white;
+      padding:20px;
+      margin-bottom:20px;
+      border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2{
+      color:#2563eb;
+    }
+
+    button{
+      padding:10px 15px;
+      border:none;
+      background:#2563eb;
+      color:white;
+      border-radius:5px;
+      cursor:pointer;
+      margin-top:10px;
+    }
+
+    button:hover{
+      background:#1d4ed8;
+    }
+
+    .output{
+      background:#eef2ff;
+      padding:10px;
+      margin-top:10px;
+      border-radius:5px;
+      white-space:pre-line;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>JavaScript Number Methods Practice</h1>
+
+    <!-- 1 -->
+    <div class="box">
+      <h2>1. toString()</h2>
+      <p>Convert number into string.</p>
+
+      <button onclick="method1()">Run Example</button>
+
+      <div class="output" id="output1"></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="box">
+      <h2>2. toFixed()</h2>
+      <p>Keep fixed decimal places.</p>
+
+      <button onclick="method2()">Run Example</button>
+
+      <div class="output" id="output2"></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="box">
+      <h2>3. toPrecision()</h2>
+      <p>Format total digits.</p>
+
+      <button onclick="method3()">Run Example</button>
+
+      <div class="output" id="output3"></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="box">
+      <h2>4. valueOf()</h2>
+      <p>Return original number value.</p>
+
+      <button onclick="method4()">Run Example</button>
+
+      <div class="output" id="output4"></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="box">
+      <h2>5. Number()</h2>
+      <p>Convert string into number.</p>
+
+      <button onclick="method5()">Run Example</button>
+
+      <div class="output" id="output5"></div>
+    </div>
+
+    <!-- 6 -->
+    <div class="box">
+      <h2>6. parseInt()</h2>
+      <p>Convert into whole number.</p>
+
+      <button onclick="method6()">Run Example</button>
+
+      <div class="output" id="output6"></div>
+    </div>
+
+    <!-- 7 -->
+    <div class="box">
+      <h2>7. parseFloat()</h2>
+      <p>Convert into decimal number.</p>
+
+      <button onclick="method7()">Run Example</button>
+
+      <div class="output" id="output7"></div>
+    </div>
+
+    <!-- 8 -->
+    <div class="box">
+      <h2>8. isNaN()</h2>
+      <p>Check if value is not a number.</p>
+
+      <button onclick="method8()">Run Example</button>
+
+      <div class="output" id="output8"></div>
+    </div>
+
+    <!-- 9 -->
+    <div class="box">
+      <h2>9. isFinite()</h2>
+      <p>Check if number is finite.</p>
+
+      <button onclick="method9()">Run Example</button>
+
+      <div class="output" id="output9"></div>
+    </div>
+
+    <!-- 10 -->
+    <div class="box">
+      <h2>10. toExponential()</h2>
+      <p>Convert into exponential form.</p>
+
+      <button onclick="method10()">Run Example</button>
+
+      <div class="output" id="output10"></div>
+    </div>
+
+    <!-- Mini Project -->
+    <div class="box">
+      <h2>Mini Practice Project</h2>
+
+      <p>
+        Convert shopping price from string into number and fix decimal places.
+      </p>
+
+      <button onclick="miniProject()">Run Project</button>
+
+      <div class="output" id="projectOutput"></div>
+    </div>
+
+  </div>
+
+  <script>
+
+    // 1. toString()
+
+    function method1(){
+
+      let mobilePrice = 25000;
+
+      let result = mobilePrice.toString();
+
+      document.getElementById("output1").innerHTML =
+      "Original Number: " + mobilePrice +
+      "<br>Converted String: " + result +
+      "<br>Type: " + typeof result;
+    }
+
+
+    // 2. toFixed()
+
+    function method2(){
+
+      let petrolPrice = 331.5678;
+
+      let result = petrolPrice.toFixed(2);
+
+      document.getElementById("output2").innerHTML =
+      "Original Price: " + petrolPrice +
+      "<br>Final Price: " + result;
+    }
+
+
+    // 3. toPrecision()
+
+    function method3(){
+
+      let percentage = 89.4567;
+
+      let result = percentage.toPrecision(4);
+
+      document.getElementById("output3").innerHTML =
+      "Percentage: " + percentage +
+      "<br>Formatted: " + result;
+    }
+
+
+    // 4. valueOf()
+
+    function method4(){
+
+      let salary = 50000;
+
+      let result = salary.valueOf();
+
+      document.getElementById("output4").innerHTML =
+      "Salary Value: " + result;
+    }
+
+
+    // 5. Number()
+
+    function method5(){
+
+      let studentMarks = "450";
+
+      let result = Number(studentMarks);
+
+      document.getElementById("output5").innerHTML =
+      "String Marks: " + studentMarks +
+      "<br>Converted Number: " + result;
+    }
+
+
+    // 6. parseInt()
+
+    function method6(){
+
+      let gameScore = "99.87points";
+
+      let result = parseInt(gameScore);
+
+      document.getElementById("output6").innerHTML =
+      "Original Value: " + gameScore +
+      "<br>Whole Number: " + result;
+    }
+
+
+    // 7. parseFloat()
+
+    function method7(){
+
+      let milkPrice = "320.75Rs";
+
+      let result = parseFloat(milkPrice);
+
+      document.getElementById("output7").innerHTML =
+      "Original Value: " + milkPrice +
+      "<br>Decimal Number: " + result;
+    }
+
+
+    // 8. isNaN()
+
+    function method8(){
+
+      let value1 = "Hello";
+      let value2 = "500";
+
+      document.getElementById("output8").innerHTML =
+      "Is 'Hello' NaN? : " + isNaN(value1) +
+      "<br>Is '500' NaN? : " + isNaN(value2);
+    }
+
+
+    // 9. isFinite()
+
+    function method9(){
+
+      let number1 = 1000;
+      let number2 = Infinity;
+
+      document.getElementById("output9").innerHTML =
+      "1000 is finite? : " + isFinite(number1) +
+      "<br>Infinity is finite? : " + isFinite(number2);
+    }
+
+
+    // 10. toExponential()
+
+    function method10(){
+
+      let bigNumber = 450000;
+
+      let result = bigNumber.toExponential(2);
+
+      document.getElementById("output10").innerHTML =
+      "Original Number: " + bigNumber +
+      "<br>Exponential Form: " + result;
+    }
+
+
+    // Mini Project
+
+    function miniProject(){
+
+      let shoppingPrice = "799.456Rs";
+
+      let convertedPrice = parseFloat(shoppingPrice);
+
+      let finalPrice = convertedPrice.toFixed(2);
+
+      document.getElementById("projectOutput").innerHTML =
+      "Shopping Price: " + shoppingPrice +
+      "<br>Converted Number: " + convertedPrice +
+      "<br>Final Price: " + finalPrice;
+    }
+
+  </script>
+
+</body>
+</html>
