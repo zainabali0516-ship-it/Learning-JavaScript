@@ -1,0 +1,1 @@
+import EmployeeCard from "./EmployeeCard"; export default ({ employees, editEmployee, deleteEmployee }) => <div>{employees.map(e => <EmployeeCard key={e.id} employee={e} editEmployee={editEmployee} deleteEmployee={deleteEmployee} />)}</div>;
