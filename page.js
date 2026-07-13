@@ -1,12 +1,8 @@
-import Link from 'next/link';
-export default function StudentsPage() {
+export default function HomePage() {
   return (
-    <div>
-      <h1>Students List</h1>
-      <ul>
-        <li><Link href="/students/101">Student Roll No: 101</Link></li>
-        <li><Link href="/students/25">Student Roll No: 25</Link></li>
-      </ul>
+    <div style={{ textAlign: 'center', padding: '2rem' }}>
+      <h1>Welcome to the Home Page</h1>
+      <p>This is a multi-page application built to understand Next.js App Router.</p>
     </div>
   );
 }
