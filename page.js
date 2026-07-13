@@ -1,8 +1,8 @@
-export default function ContactPage() {
+export default function ServicesPage() {
   return (
     <div>
-      <h1>Contact Us Page</h1>
-      <p>Feel free to reach out to us at contact@example.com.</p>
+      <h1>Services Main Page</h1>
+      <p>Please select a service from the sidebar menu to see nested routing in action.</p>
     </div>
   );
 }
