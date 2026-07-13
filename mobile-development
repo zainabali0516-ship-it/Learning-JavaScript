@@ -1,0 +1,3 @@
+export default function MobileDevPage() {
+  return <h1>📱 Mobile Development Service</h1>;
+}
