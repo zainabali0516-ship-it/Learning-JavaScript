@@ -1,0 +1,11 @@
+import { use } from 'react';
+
+export default function BlogPost({ params }) {
+  const resolvedParams = use(params);
+  return (
+    <div>
+      <h1>Dynamic Blog Post</h1>
+      <h2 style={{ color: '#0070f3' }}>Blog: {resolvedParams.slug}</h2>
+    </div>
+  );
+}
