@@ -1,8 +1,8 @@
-export default function HomePage() {
+export default function AboutPage() {
   return (
-    <div style={{ textAlign: 'center', padding: '2rem' }}>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is a multi-page application built to understand Next.js App Router.</p>
+    <div>
+      <h1>About Us Page</h1>
+      <p>We are learning routing, layouts, and dynamic parameters in Next.js!</p>
     </div>
   );
 }
