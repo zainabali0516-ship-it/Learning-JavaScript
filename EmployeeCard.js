@@ -1,0 +1,1 @@
+export default ({ employee, editEmployee, deleteEmployee }) => <div className="employee-card"><h2>{employee.name}</h2><p>{employee.email}</p><p>{employee.position}</p><p>{employee.department}</p><p>PKR {employee.salary}</p><button onClick={() => editEmployee(employee)}>Edit</button> <button onClick={() => deleteEmployee(employee.id)}>Delete</button></div>;
